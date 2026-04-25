@@ -12,5 +12,4 @@ jobs:
     with:
       java_version: '17'
       maven_goals: 'clean verify'
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      service-name: 'api-gateway'

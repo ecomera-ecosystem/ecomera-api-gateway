@@ -11,6 +11,9 @@ on:
 
 jobs:
   call-docker:
+    permissions:
+      contents: read
+      packages: read
     uses: ecomera-ecosystem/.github/.github/workflows/docker.yml@main
     with:
       image_name: "ammysf/ecomera-api-gateway"
