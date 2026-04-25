@@ -1,0 +1,21 @@
+name: API Gateway Docker
+
+on:
+  push:
+    branches: [ "master" ]
+    tags:
+      - 'v*.*.*'
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  call-docker:
+    uses: ecomera-ecosystem/.github/.github/workflows/docker.yml@main
+    with:
+      image_name: "ammysf/ecomera-api-gateway"
+      dockerfile: "./Dockerfile"
+      context: "."
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}

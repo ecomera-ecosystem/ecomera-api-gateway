@@ -1,0 +1,16 @@
+name: API Gateway CI
+
+on:
+  push:
+    branches: [ "master", "development" ]
+  pull_request:
+    branches: [ "master", "development" ]
+
+jobs:
+  call-ci:
+    uses: ecomera-ecosystem/.github/.github/workflows/ci.yml@main
+    with:
+      java_version: '17'
+      maven_goals: 'clean verify'
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
