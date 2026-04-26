@@ -19,3 +19,6 @@ jobs:
       image_name: "ammysf/ecomera-api-gateway"
       dockerfile: "./Dockerfile"
       context: "."
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
