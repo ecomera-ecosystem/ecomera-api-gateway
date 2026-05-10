@@ -46,6 +46,8 @@ Routes are managed via Spring Cloud Config Server from [ecomera-config-server](h
 | Service | Path | Target |
 |---------|------|--------|
 | Auth Service | `/api/v1/auth/**` | `lb://ecomera-auth-service` |
+| Product Service | `/api/v1/products/**` | `lb://ecomera-product-service` |
+| Cart Service | `/api/v1/cart/**` | `lb://ecomera-cart-service` |
 
 ## Configuration
 
