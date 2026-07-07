@@ -43,6 +43,12 @@
         <java.version>17</java.version>
         <spring-cloud.version>2025.0.1</spring-cloud.version>
         <jjwt.version>0.13.0</jjwt.version>
+
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.organization>ecomera-ecosystem</sonar.organization>
+        <sonar.projectKey>ecomera-api-gateway</sonar.projectKey>
+        <sonar.java.source>17</sonar.java.source>
+        <sonar.java.target>17</sonar.java.target>
     </properties>
 <dependencies>
         <dependency>
@@ -121,6 +127,15 @@
     </dependencyManagement>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>5.7.0.6970</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
