@@ -43,6 +43,7 @@
         <java.version>17</java.version>
         <spring-cloud.version>2025.0.1</spring-cloud.version>
         <jjwt.version>0.13.0</jjwt.version>
+        <jacoco.version>0.8.12</jacoco.version>
 
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.organization>ecomera-ecosystem</sonar.organization>
@@ -134,6 +135,11 @@
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>5.7.0.6970</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -157,6 +163,24 @@
                         <arg>-parameters</arg>
                     </compilerArgs>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
