@@ -6,6 +6,9 @@
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
 ![Gateway](https://img.shields.io/badge/API%20Gateway-Active-6DB33F)
 ![License](https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative&logoColor=white)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ecomera-api-gateway&metric=coverage)](https://sonarcloud.io/summary/new_code?id=ecomera-api-gateway)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=ecomera-api-gateway&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ecomera-api-gateway)
+
 Spring Cloud Gateway providing **routing, load balancing, and distributed tracing** for the Ecomera microservices ecosystem.
 
 ## Overview
